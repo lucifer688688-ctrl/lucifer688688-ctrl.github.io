@@ -9,17 +9,27 @@ await mkdir(outputDirectory, { recursive: true });
 await cp(clientDirectory, outputDirectory, { recursive: true });
 
 const { default: worker } = await import(workerUrl.href);
-const response = await worker.fetch(
-  new Request("https://lucifer688688-ctrl.github.io/", {
-    headers: { accept: "text/html" },
-  }),
-  { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-  { waitUntil() {}, passThroughOnException() {} },
-);
+const runtime = {
+  ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
+};
+const executionContext = { waitUntil() {}, passThroughOnException() {} };
 
-if (!response.ok) {
-  throw new Error(`GitHub Pages export failed with HTTP ${response.status}.`);
+for (const route of ["/", "/v2"]) {
+  const response = await worker.fetch(
+    new Request(`https://lucifer688688-ctrl.github.io${route}`, {
+      headers: { accept: "text/html" },
+    }),
+    runtime,
+    executionContext,
+  );
+
+  if (!response.ok) {
+    throw new Error(`GitHub Pages export failed for ${route} with HTTP ${response.status}.`);
+  }
+
+  const routeDirectory = route === "/" ? outputDirectory : new URL("./v2/", outputDirectory);
+  await mkdir(routeDirectory, { recursive: true });
+  await writeFile(new URL("index.html", routeDirectory), await response.text(), "utf8");
 }
 
-await writeFile(new URL("index.html", outputDirectory), await response.text(), "utf8");
 await writeFile(new URL(".nojekyll", outputDirectory), "", "utf8");
