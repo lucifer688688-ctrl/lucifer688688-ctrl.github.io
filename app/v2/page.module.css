@@ -40,7 +40,7 @@
 .appAudience strong { color: #263550; font-size: 17px; line-height: 1.6; }
 .solutions { width: min(1320px, calc(100% - 72px)); margin: 0 auto; padding: 92px 0 104px; }
 .headingCopy { max-width: 360px; margin: 0; color: #61708a; line-height: 1.75; }
-.solutionGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 54px; }
+.solutionGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 54px; }
 .solutionCard { min-height: 285px; padding: 30px; border: 1px solid #dae3f3; border-radius: 8px; background: #fff; box-shadow: 0 14px 32px rgba(75, 93, 135, 0.06); transition: transform 160ms ease, box-shadow 160ms ease; }
 .solutionCard:hover { transform: translateY(-4px); box-shadow: 0 20px 42px rgba(75, 93, 135, 0.12); }
 .solutionIndex { color: #6176e2; font-size: 13px; font-weight: 800; }
