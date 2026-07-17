@@ -124,6 +124,27 @@ export default function VersionTwoPreview() {
         </div>
       </section>
 
+      <section className={styles.product} id="product" aria-labelledby="v2-product-title">
+        <div>
+          <p className={styles.eyebrow}>PRODUCT DEMO</p>
+          <h2 id="v2-product-title">无限维度 AI 志愿</h2>
+          <p>面向高考志愿决策场景的智能辅助产品，结合位次、历史录取与规则信息，帮助用户形成更清晰的志愿方案。</p>
+          <span>真实产品演示 · 推荐页界面</span>
+        </div>
+        <div className={styles.productVisual} aria-label="无限维度 AI 志愿推荐页产品演示">
+          <div className={styles.productFrame}>
+            <div className={styles.productFrameBar}>
+              <span>无限维度 AI 志愿</span>
+              <span>产品演示</span>
+            </div>
+            <img
+              src="/images/ai-volunteer-demo.png"
+              alt="无限维度 AI 志愿推荐页的筛选条件、推荐结果和分析侧栏界面"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className={styles.method} id="method" aria-labelledby="v2-method-title">
         <div className={styles.sectionHeading}>
           <div>
@@ -162,27 +183,6 @@ export default function VersionTwoPreview() {
           <article><strong>数据边界</strong><span>明确知识来源、权限范围与数据使用方式。</span></article>
           <article><strong>体验与集成</strong><span>兼顾使用体验，以及与既有工具、角色和流程的协同。</span></article>
           <article><strong>持续运营</strong><span>为上线后的评估、反馈和迭代预留机制。</span></article>
-        </div>
-      </section>
-
-      <section className={styles.product} id="product" aria-labelledby="v2-product-title">
-        <div>
-          <p className={styles.eyebrow}>PRODUCT DEMO</p>
-          <h2 id="v2-product-title">无限维度 AI 志愿</h2>
-          <p>面向高考志愿决策场景的智能辅助产品，结合位次、历史录取与规则信息，帮助用户形成更清晰的志愿方案。</p>
-          <span>真实产品演示 · 推荐页界面</span>
-        </div>
-        <div className={styles.productVisual} aria-label="无限维度 AI 志愿推荐页产品演示">
-          <div className={styles.productFrame}>
-            <div className={styles.productFrameBar}>
-              <span>无限维度 AI 志愿</span>
-              <span>产品演示</span>
-            </div>
-            <img
-              src="/images/ai-volunteer-demo.png"
-              alt="无限维度 AI 志愿推荐页的筛选条件、推荐结果和分析侧栏界面"
-            />
-          </div>
         </div>
       </section>
 
