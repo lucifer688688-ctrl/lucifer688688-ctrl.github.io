@@ -190,13 +190,21 @@ export default function VersionTwoPreview() {
         <div>
           <p className={styles.eyebrow}>START A CONVERSATION</p>
           <h2 id="v2-contact-title">把你的问题交给我们，把时间留给真正重要的事。</h2>
+          <p className={styles.contactDetails}>服务区域：全国 · 主要服务中小企业与个体户 · 邮箱：<a href="mailto:1395713758@qq.com">1395713758@qq.com</a></p>
         </div>
           <button className={styles.primaryButton} type="button" onClick={() => setDialogOpen(true)}>委托制作应用 <span aria-hidden="true">→</span></button>
       </section>
 
       <footer className={styles.footer}>
-        <span>无限维度 · AI 应用定制 · 企业 AI 赋能 · 持续运营</span>
-        <span>第 2 版视觉预览</span>
+        <div className={styles.footerIdentity}>
+          <strong>临沂无限维度人工智能科技有限公司</strong>
+          <span>人工智能应用开发 · AI 应用定制 · 企业智能化赋能 · 持续运营</span>
+        </div>
+        <div className={styles.footerMeta}>
+          <span>服务区域：全国</span>
+          <span>主要客户：中小企业、个体户</span>
+          <a href="mailto:1395713758@qq.com">1395713758@qq.com</a>
+        </div>
       </footer>
 
       {dialogOpen && (

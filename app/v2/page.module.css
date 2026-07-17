@@ -82,7 +82,13 @@
 .contact { display: flex; align-items: center; justify-content: space-between; gap: 36px; padding: 92px max(36px, calc((100% - 1320px) / 2)); background: #152a61; color: #fff; }
 .contact .eyebrow { color: #bdceff; }
 .contact .primaryButton { background: #fff; color: #3152cb; box-shadow: none; }
-.footer { display: flex; justify-content: space-between; gap: 20px; padding: 28px max(36px, calc((100% - 1320px) / 2)); color: #78859c; font-size: 13px; }
+.contactDetails { max-width: 720px; margin: 18px 0 0; color: #d4def7; font-size: 14px; line-height: 1.8; }
+.contactDetails a { color: #ffffff; font-weight: 700; }
+.footer { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; padding: 28px max(36px, calc((100% - 1320px) / 2)); color: #78859c; font-size: 13px; }
+.footerIdentity, .footerMeta { display: grid; gap: 8px; line-height: 1.7; }
+.footerIdentity strong { color: #dce5ff; font-size: 14px; }
+.footerMeta { justify-items: end; text-align: right; }
+.footerMeta a { color: #aabaff; font-weight: 700; }
 .backdrop { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(17, 28, 55, 0.48); }
 .dialog { position: relative; width: min(100%, 560px); padding: 42px; border-radius: 10px; background: #fff; box-shadow: 0 26px 80px rgba(18, 34, 79, 0.24); }
 .dialog form { display: grid; gap: 16px; }
@@ -151,7 +157,8 @@
   .assuranceGrid article:first-child { border-top: 0; }
   .product { gap: 38px; }
   .productVisual { padding: 14px; }
-  .footer { align-items: flex-start; flex-direction: column; padding: 24px 20px; }
+  .footer { grid-template-columns: 1fr; padding: 24px 20px; }
+  .footerMeta { justify-items: start; text-align: left; }
   .dialog { padding: 34px 22px; }
   .dialog h2 { font-size: 29px; }
 }
