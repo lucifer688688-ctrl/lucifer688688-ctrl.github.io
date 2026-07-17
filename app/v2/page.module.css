@@ -84,11 +84,13 @@
 .contact .primaryButton { background: #fff; color: #3152cb; box-shadow: none; }
 .contactDetails { max-width: 720px; margin: 18px 0 0; color: #d4def7; font-size: 14px; line-height: 1.8; }
 .contactDetails a { color: #ffffff; font-weight: 700; }
-.footer { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; padding: 28px max(36px, calc((100% - 1320px) / 2)); color: #78859c; font-size: 13px; }
-.footerIdentity, .footerMeta { display: grid; gap: 8px; line-height: 1.7; }
-.footerIdentity strong { color: #dce5ff; font-size: 14px; }
-.footerMeta { justify-items: end; text-align: right; }
-.footerMeta a { color: #aabaff; font-weight: 700; }
+.footer { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; padding: 54px max(36px, calc((100% - 1320px) / 2)) 28px; background: #0d1a3b; color: #b7c5e5; font-size: 13px; }
+.footerIdentity, .footerColumn { display: grid; align-content: start; gap: 9px; line-height: 1.7; }
+.footerKicker { color: #8ea9ff; font-size: 11px; font-weight: 800; letter-spacing: 1.8px; }
+.footerIdentity strong, .footerColumn strong { color: #f1f5ff; font-size: 15px; }
+.footerColumn strong { margin-bottom: 4px; font-size: 13px; }
+.footerColumn a { color: #9fb5ff; font-weight: 800; }
+.footerBottom { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 24px; padding-top: 22px; border-top: 1px solid rgba(211, 224, 255, 0.16); color: #8797bc; font-size: 12px; }
 .backdrop { position: fixed; z-index: 20; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(17, 28, 55, 0.48); }
 .dialog { position: relative; width: min(100%, 560px); padding: 42px; border-radius: 10px; background: #fff; box-shadow: 0 26px 80px rgba(18, 34, 79, 0.24); }
 .dialog form { display: grid; gap: 16px; }
@@ -121,7 +123,7 @@
   .capabilityGrid li:nth-child(n + 3) { border-top: 1px solid #dce4f3; }
   .product { grid-template-columns: 1fr; padding: 76px 40px; }
   .contact { padding: 72px 40px; }
-  .footer { padding: 25px 40px; }
+  .footer { grid-template-columns: 1fr 1fr; gap: 28px; padding: 42px 40px 24px; }
 }
 
 @media (max-width: 560px) {
@@ -157,8 +159,8 @@
   .assuranceGrid article:first-child { border-top: 0; }
   .product { gap: 38px; }
   .productVisual { padding: 14px; }
-  .footer { grid-template-columns: 1fr; padding: 24px 20px; }
-  .footerMeta { justify-items: start; text-align: left; }
+  .footer { grid-template-columns: 1fr; padding: 38px 20px 22px; }
+  .footerBottom { align-items: flex-start; flex-direction: column; gap: 7px; }
   .dialog { padding: 34px 22px; }
   .dialog h2 { font-size: 29px; }
 }

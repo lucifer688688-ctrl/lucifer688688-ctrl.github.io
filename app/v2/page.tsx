@@ -197,13 +197,23 @@ export default function VersionTwoPreview() {
 
       <footer className={styles.footer}>
         <div className={styles.footerIdentity}>
+          <span className={styles.footerKicker}>INFINITE DIMENSION AI</span>
           <strong>临沂无限维度人工智能科技有限公司</strong>
-          <span>人工智能应用开发 · AI 应用定制 · 企业智能化赋能 · 持续运营</span>
+          <span>把人工智能能力落到真实业务现场。</span>
         </div>
-        <div className={styles.footerMeta}>
+        <div className={styles.footerColumn}>
+          <strong>服务范围</strong>
           <span>服务区域：全国</span>
           <span>主要客户：中小企业、个体户</span>
+        </div>
+        <div className={styles.footerColumn}>
+          <strong>联系合作</strong>
+          <span>AI 应用定制 · 企业智能化赋能</span>
           <a href="mailto:1395713758@qq.com">1395713758@qq.com</a>
+        </div>
+        <div className={styles.footerBottom}>
+          <span>人工智能应用开发 · AI 应用定制 · 持续运营</span>
+          <span>© 2026 临沂无限维度人工智能科技有限公司</span>
         </div>
       </footer>
 
